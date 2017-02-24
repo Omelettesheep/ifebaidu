@@ -1,0 +1,34 @@
+input{
+	display: none;
+}
+
+label{
+	display: inline-block;
+	cursor: pointer;
+	width:20px;
+	height: 20px
+}
+
+.checkbox+label{
+	display: block;
+	width: 20px;
+	height:20px;
+	background: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png) no-repeat;
+	background-position: -20px -30px;
+}
+
+.checkbox:checked+label{
+	background-position: -55px -30px;
+}
+
+.radio+label{
+	display: block;
+	width:20px;
+	height:20px;
+	background: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png) no-repeat;
+	background-position: -20px -10px;
+}
+
+.radio:checked+label{
+	background-position: -55px -10px;
+}

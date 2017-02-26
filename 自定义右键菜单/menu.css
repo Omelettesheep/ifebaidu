@@ -1,0 +1,43 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#container{
+	width:100vw;
+	height: 100vh;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+#content{
+	//border: 1px solid black;
+	background-color: #eee;
+	width:50%;
+	height:50%;
+	margin:0 auto;
+	font-size:30pt;
+	padding: 4% 0;
+	box-shadow:0 0 10px #eee; 
+}
+
+#menu{
+	position: absolute;
+	border:1px solid black;
+	width: 100px;
+	height:200px;
+	text-align: center;
+	top:0;
+	left: 0;
+	display: none;
+	background: #fff;
+}
+
+#menu ul li{
+	list-style: none;
+	cursor: pointer;
+}
+
+#menu ul li:hover{
+	background-color: #eee;
+}

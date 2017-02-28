@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+    <title>正则表达式</title>
+    <style>
+    .*{
+    	margin:0;
+    	padding: 0;
+    }
+    .container{
+    	width:100vw;
+    	height:100vh;
+    	display: table-cell;
+    	vertical-align: middle;
+    }
+
+    #form1{
+    	border: 3px solid #eee;
+    	position: relative;
+    	height:400px;
+    	width:700px;
+    	margin: 0 auto;
+    	text-align: center;
+    	
+    }
+
+    .container #form1 div{
+
+    	position: absolute;
+    	width:500px;
+    	height:150px;
+    	text-align: center;
+    	margin: 0 auto;
+    	left:100px;
+
+    }
+    .container #form1 div.q1{
+    	top:30px;
+    }
+
+    .container #form1 div.q2{
+    	bottom:30px;
+    }
+
+    </style>
+  </head>
+<body>
+  <div class = "container">
+  	<form id="form1">
+  		<div class = "q1">
+  		<p>任务一：手机号码</p>
+  		<input type="text" placeholder="请输入一个手机号" id = "t1"></input>
+  		<input type="button" id = "b1" value="确认"></input>
+  		</div>
+  		<div class="q2">
+  		<p>任务二：相邻重复单词</p>
+  		<input type="text" placeholder="请输入一串单词" id = "t2"></input>
+  		<input type="button" id = "b2" value="确认"></input>
+  		</div>
+  	</form>
+  </div>
+  <script>
+  var b1 = document.getElementById("b1");
+  var b2 = document.getElementById("b2");
+  b1.addEventListener("click",function(){
+  	var text1 = document.getElementById("t1").value;
+  	if(/1[34578]\d{9}/.test(text1)) alert("匹配成功");
+  	else alert("匹配失败");
+  });
+
+   b2.addEventListener("click",function(){
+  	var text2 = document.getElementById("t2").value;
+  	if(/\b([a-zA-Z]+)\b\s+\b\1\b/.test(text2)) alert("匹配成功");
+  	else alert("匹配失败");
+  });
+
+  	
+  </script>
+</body>　　
+
+</html>

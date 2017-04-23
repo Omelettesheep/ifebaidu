@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html lang = 'en'>
+	<head>
+		<meta charset="utf-8">
+		<title>Position and Center</title>
+	</head>
+	<style>
+	body{
+		margin:0;
+		padding: 0;
+		position: relative;
+
+	}
+		.grey{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-top: -100px;
+			width:400px;
+			height:200px;
+			background-color: #CCCCCC;
+			overflow: hidden;
+		}
+
+		.lCircle,.rCircle{
+			background-color: #FFCC00;
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+		}
+
+		.lCircle{
+			position:absolute;
+			left: -50px;
+			top:-50px;
+		}
+
+		.rCircle{
+			position:absolute;
+			right: -50px;
+			bottom:-50px;
+		}
+	</style>
+	<body>
+		<div class="grey">
+			<div class="lCircle"></div>
+			<div class="rCircle"></div>
+		</div>
+	</body>
+</html>
+

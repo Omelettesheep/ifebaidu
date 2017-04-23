@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度</title>
+</head>
+<style>
+	html,body{
+		width: 100%;
+		//height: 100%;
+		margin:0;
+		padding: 0;
+	}
+	.container{
+		background-color: #DEDEDE;
+		height: 100%;
+		width: 100%;
+		//clear: both;
+	}
+
+	.container::after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	ul,p{
+		padding: 0;
+		margin:0;
+	}
+	.header{
+		background-color: #333333;
+		height:60px;
+		width: 100%;
+	}
+	.header img{
+		width: 188px;
+		height: 60px;
+	}
+	ul{
+		float:right;
+		line-height: 60px;
+		margin-right: 18px;
+	}
+
+	ul li::before{
+		content: '●';
+		color: #262626;
+		margin-right: 5px;
+
+	}
+
+	ul li{
+		float: left;
+		color: white;
+		font-size: 12px;
+		margin:0 10px 0 10px;
+		list-style: none;
+
+	}
+
+	.sidebar{
+		padding: 20px;
+		width: 325px;
+		height: 458px;
+		float: right;
+		background-color: #ffffff;
+		border:1px solid #9C9C9C;
+		margin-right: 22px;
+		margin-top:22px;
+		box-shadow: 1px 1px 5px #9C9C9C;
+
+	}
+
+	.sidebar .title{
+		height: 38px;
+		border-left: 3px solid #DEDEDE;
+		line-height:38px;
+		padding-left:16px;
+		font-weight:bold;
+		font-size: 16px;
+
+	}
+	
+
+	.sidebar .form{
+		font-size: 11px;
+		padding: 20px;
+		text-align: center;
+	}
+	
+	.form >div{
+		margin-top:14px;
+	}
+
+	.form .tips{
+		color:#DEDEDE;
+	}
+
+	.container .left{
+		margin-top:22px;
+		margin-right: 391px;
+    	padding: 0px 20px 0 20px;
+	}
+	.left .article{
+		background-color: white;
+		border:1px solid #9C9C9C;
+		box-shadow: 1px 1px 5px #9C9C9C;
+		margin-bottom: 21px; 
+		padding: 20px;
+	}
+
+	.article::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	h1{
+		font-size: 22px;
+	}
+	h2{
+		font-size:16px; 
+		color: #605D56;
+	}
+	h3{
+		font-size: 13px;
+		color: #707176;
+	}
+
+	.article p{
+		font-size: 14px;
+		line-height: 28px;
+	}
+
+	.pic{
+		float: left;
+		text-align: center;
+		position: relative;
+		border:1px solid #9C9C9C;
+		width: 150px;
+		height: 150px;
+		margin:10px;
+	}
+	.pic img{
+		width: 100px;
+		height: 100px;
+	}
+	ol{
+		font-weight: bold;
+	}
+	
+	table th{
+		text-align: left;
+	}
+
+	table{
+		font-size: 11px;
+		border-collapse: collapse;
+		border:1px solid #9C9C9C;
+		width: 100%;
+	}
+	td,th{
+		height: 30px;
+		border:1px solid #9C9C9C;
+	}
+
+	tr:nth-child(1){
+		color:white;
+		background: #333333;
+	}
+
+	tr:nth-last-child(1) td{
+		background: #cccccc;
+		font-weight: bold;
+		border:0px;
+		
+
+	}
+	input[type=button]{
+		background-color: #3355D0;
+		color:white;
+		width:100%;
+		height:41px;
+		border-radius:15%
+
+	}
+
+</style>
+<body>
+	<div class="container">
+		<div class="header">
+			<img src="123123.png">
+			<ul>
+				<li>导航链接一</li>
+				<li>导航链接二</li>
+				<li>导航链接三</li>
+				<li>导航链接四</li>
+			</ul>
+		</div>
+		<div class="sidebar">
+			<p class="title">这里以后是一个侧栏，这是侧栏的标题</p>
+			<div class="form">
+					<div>
+                        <label for="email">请输入邮箱地址</label>
+                        <input type="text" id="email" placeholder="这是一个文本输入框">
+                    </div>
+                    <div class="tips">
+                        <p>邮箱地址请按要求格式输入</p>
+                    </div>
+                    <div>
+                        <label for="psw">请输入密码</label>
+                        <input type="text" id="psw" placeholder="这是一个文本输入框">
+                    </div>
+                    <div>
+                        <label for="psw2">请重复输入密码</label>
+                        <input type="text" id="psw2" placeholder="这是一个文本输入框">
+                        <div class="tips">
+                        	<p>密码设置为6-16位英文数字</p>
+                    	</div>
+                    </div>
+                    <div>
+                        <label for="sex">性别</label>
+                        <input type="radio" id="sex" name="sex" checked="checked">男
+                        <input type="radio" name="sex">女
+                    </div>
+                    <div>
+                        <label for="addr">城市</label>
+                        <select id="addr">
+                            <option selected="selected">北京</option>
+                            <option>天津</option>
+                            <option>武汉</option>
+                            <option>上海</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hobbe">爱好</label>
+                        <input type="checkbox" id="hobbe" name="hobbe">运动
+                        <input type="checkbox" name="hobbe">艺术
+                        <input type="checkbox" name="hobbe">科学
+                    </div>
+                    <div class="descrb">
+                        <label for="descr">个人描述</label>
+                        <textarea id="descr" cols="30" rows="5">我是好人我是好人我是好人我是好人</textarea>
+                    </div>
+                    <input type="button" value = '确认提交'></input>
+			</div>
+			
+		</div>
+		<div class="left">
+			<div class="article">
+				<h1>文章一级标题</h1>
+				<h2>文章二级标题</h2>
+				<h3><span>文章作者</span><span>文章发表时间</span></h3>
+				<p>
+					人生如一次长长的旅行，旅行中有坦途也有弯路，你得以平静的心态面对每一天，挑战自我，执着向前，一如既往地朝着目的地走下去。当你到达终点站顾却来径时，才发现人生的旅途有喜有忧，有笑有泪，甚至得少失多，而这一切已构成了你生命旅程的全部。人生是一本书。
+					人生是一本难写的书，你就是再富有情感，也难以料想未来的墨迹留于何处。可你不写不行，于是你的每一天都是一篇文章，而且体裁各异，一页页的云彩或淡或浓，蓦然将你的生命包围，铸成了你的生活。聪明者会在每一页写出不朽的诗文，怠惰者却把太好的青春账簿涂抹一通，一无所获。一页页重复365次，你便迎来了一个个难忘的历程，不必强求别人的赏识，最重要的是写下无憾的人生。
+					人生可用尺量。这把尺在人们自己心中，心静则尺平，心明则尺准。这把尺度量着人生的轨迹和一言一行。请记住：量人时不要失之过严，量己时不要疏于过宽。“责人之心责己，恕己之心恕人。”持平这把尺子，必有堂堂正正的人生。
+				</p>
+				<img src="2.jpg" alt="">
+				<p>
+					人生如一次长长的旅行，旅行中有坦途也有弯路，你得以平静的心态面对每一天，挑战自我，执着向前，一如既往地朝着目的地走下去。当你到达终点站顾却来径时，才发现人生的旅途有喜有忧，有笑有泪，甚至得少失多，而这一切已构成了你生命旅程的全部。人生是一本书。
+					人生是一本难写的书，你就是再富有情感，也难以料想未来的墨迹留于何处。可你不写不行，于是你的每一天都是一篇文章，而且体裁各异，一页页的云彩或淡或浓，蓦然将你的生命包围，铸成了你的生活。聪明者会在每一页写出不朽的诗文，怠惰者却把太好的青春账簿涂抹一通，一无所获。一页页重复365次，你便迎来了一个个难忘的历程，不必强求别人的赏识，最重要的是写下无憾的人生。
+					人生可用尺量。这把尺在人们自己心中，心静则尺平，心明则尺准。这把尺度量着人生的轨迹和一言一行。请记住：量人时不要失之过严，量己时不要疏于过宽。“责人之心责己，恕己之心恕人。”持平这把尺子，必有堂堂正正的人生。
+				</p>
+			</div>
+			<div class="article">
+				<h1>另一篇文章一级标题</h1>
+				<h2>文章二级标题</h2>
+				<h3><span>文章作者</span><span>文章发表时间</span></h3>
+				<p>
+					人生如一次长长的旅行，旅行中有坦途也有弯路，你得以平静的心态面对每一天，挑战自我，执着向前，一如既往地朝着目的地走下去。当你到达终点站顾却来径时，才发现人生的旅途有喜有忧，有笑有泪，甚至得少失多，而这一切已构成了你生命旅程的全部。人生是一本书。
+					人生是一本难写的书，你就是再富有情感，也难以料想未来的墨迹留于何处。可你不写不行，于是你的每一天都是一篇文章，而且体裁各异，一页页的云彩或淡或浓，蓦然将你的生命包围，铸成了你的生活。聪明者会在每一页写出不朽的诗文，怠惰者却把太好的青春账簿涂抹一通，一无所获。一页页重复365次，你便迎来了一个个难忘的历程，不必强求别人的赏识，最重要的是写下无憾的人生。
+					人生可用尺量。这把尺在人们自己心中，心静则尺平，心明则尺准。这把尺度量着人生的轨迹和一言一行。请记住：量人时不要失之过严，量己时不要疏于过宽。“责人之心责己，恕己之心恕人。”持平这把尺子，必有堂堂正正的人生。
+				</p>
+				<img src="2.jpg" alt="">
+				<p>
+					人生如一次长长的旅行，旅行中有坦途也有弯路，你得以平静的心态面对每一天，挑战自我，执着向前，一如既往地朝着目的地走下去。当你到达终点站顾却来径时，才发现人生的旅途有喜有忧，有笑有泪，甚至得少失多，而这一切已构成了你生命旅程的全部。人生是一本书。
+					人生是一本难写的书，你就是再富有情感，也难以料想未来的墨迹留于何处。可你不写不行，于是你的每一天都是一篇文章，而且体裁各异，一页页的云彩或淡或浓，蓦然将你的生命包围，铸成了你的生活。聪明者会在每一页写出不朽的诗文，怠惰者却把太好的青春账簿涂抹一通，一无所获。一页页重复365次，你便迎来了一个个难忘的历程，不必强求别人的赏识，最重要的是写下无憾的人生。
+					人生可用尺量。这把尺在人们自己心中，心静则尺平，心明则尺准。这把尺度量着人生的轨迹和一言一行。请记住：量人时不要失之过严，量己时不要疏于过宽。“责人之心责己，恕己之心恕人。”持平这把尺子，必有堂堂正正的人生。
+				</p>
+			</div>
+			<div class="article">
+				<h1>图片</h1>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				<div class="pic">
+					<p>好看的图片</p>
+					<img src="2.jpg" alt="">
+				</div>
+				
+			</div>
+			<div class="article">
+				<h1>最后一篇文章一级标题</h1>
+				<h2>文章二级标题</h2>
+				<h3><span>文章作者</span><span>文章发表时间</span></h3>
+				<ol>
+					<li>排名1</li>
+					<li>排名2</li>
+					<li>排名3</li>
+				</ol>
+				<p>下面是一个表格，我这里给表格加了一个border="1"好让你看出是一个表格，你们不用写html时候不需要加</p>
+				<table>
+					<tr>
+						<th>表头</th>
+						<th>表头</th>
+						<th>表头</th>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="">操作</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="">操作</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="">操作</a></td>
+					</tr>
+					<tr>
+						<td>总计</td>
+						<td colspan="2">1000</td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		<div class="footer"></div>
+		
+	</div>
+	
+</body>
+</html>
